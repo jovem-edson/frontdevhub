@@ -1,0 +1,28 @@
+.colecao-container {
+    display: flex;
+    width: 500px;
+    height: 150px;
+    gap: 15px;
+
+    .colecao-foto {
+        width: 300px;
+        height: 100%;
+        border-radius: 15px;
+        background-color: #ededed;
+    }
+
+    .colecao-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .colecao-titulo {
+            color: #e89b21;
+        }
+
+        p {
+            color: #343a40;
+            font-weight: 500;
+        }
+    }
+}

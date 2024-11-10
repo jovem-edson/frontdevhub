@@ -1,6 +1,7 @@
 import './index.scss'
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
+import Colecao from '../../components/colecao'
 
 export default function Home() {
     return (
@@ -14,7 +15,9 @@ export default function Home() {
                     </h1>
 
                     <div className='colecoes'>
-                        <p>oiii</p>
+                        <Colecao/>
+                        <Colecao/>
+                        <Colecao/>
                     </div>
                 </section>
 

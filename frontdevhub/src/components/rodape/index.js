@@ -1,7 +1,7 @@
 import './index.scss'
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
-function Rodape() {
+export default function Rodape() {
   return (
     <footer className='rodape'>
       <div className='rodape-conteudo'>
@@ -28,5 +28,3 @@ function Rodape() {
     </footer>
   );
 }
-
-export default Rodape;
