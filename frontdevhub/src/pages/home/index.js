@@ -1,5 +1,6 @@
 import './index.scss'
 import Cabecalho from '../../components/cabecalho'
+import Rodape from '../../components/rodape'
 
 export default function Home() {
     return (
@@ -41,6 +42,8 @@ export default function Home() {
                 </section>
 
             </main>
+
+            <Rodape/>
         
         
 

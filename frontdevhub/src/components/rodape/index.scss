@@ -1,0 +1,52 @@
+.rodape {
+    background-color: #343a40;
+    color: #fff;
+    padding: 32px 16px;
+    text-align: center;
+  
+    .rodape-conteudo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+  
+      .rodape-logo {
+        font-size: 32px;
+        font-weight: bold;
+        color: #e89b21;
+      }
+  
+      .rodape-nav {
+        display: flex;
+        gap: 16px;
+  
+        a {
+          color: #e89b21;
+          text-decoration: none;
+          font-weight: 500;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+  
+      .rodape-icones {
+        display: flex;
+        gap: 16px;
+  
+        a {
+          color: #e89b21;
+          font-size: 24px;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+  
+      .rodape-copyright {
+        font-size: 14px;
+        color: #ced4da;
+      }
+    }
+  }
+  
