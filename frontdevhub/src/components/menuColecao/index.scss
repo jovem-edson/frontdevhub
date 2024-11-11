@@ -1,0 +1,49 @@
+.opcoes-colecao {
+    position: relative;
+    display: inline-block;
+
+    .icone-menu {
+        font-size: 24px;
+        cursor: pointer;
+        color: #E89B21;
+        transition: 0.3s;
+
+        &:hover {
+            color: #343A40;
+
+        }
+    }
+
+    .menu-opcoes {
+        position: absolute;
+        top: 30px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+
+        button {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            background: none;
+            color: #343A40;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #E89B21;
+                color: white;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+}
