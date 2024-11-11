@@ -2,8 +2,11 @@ import './index.scss'
 import Cabecalho from '../../components/cabecalho'
 import Rodape from '../../components/rodape'
 import Colecao from '../../components/colecao'
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+    const navigate = useNavigate();
+    
     return (
         <body className='pagina-home'>
             <Cabecalho/>
@@ -36,7 +39,7 @@ export default function Home() {
                                 VISUALIZAR
                             </button>
 
-                            <button className='botao-primario'>
+                            <button onClick={() => navigate('/criar-colecao')} className='botao-primario'>
                                 ADICIONAR
                             </button>
                         </div>
