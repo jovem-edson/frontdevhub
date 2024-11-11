@@ -35,7 +35,7 @@ body {
     justify-content: flex-end;
 
     h1 {
-        color: #E89B21;
+        color:#61809e;
         font-size: 35px;
     }
 
@@ -65,7 +65,7 @@ body {
         .botao-primario {
             background-color: #343A40;
             border: none;
-            color: #E89B21;
+            color:#61809e;
             transition: background-color 0.3s;
 
             &:hover {
@@ -74,13 +74,13 @@ body {
         }
 
         .botao-secundario {
-            background-color: #E89B21; 
+            background-color: #61809e; 
             border: none;
             color: #343A40;
             transition: background-color 0.3s;
 
             &:hover {
-                background-color: #b97a1a;
+                background-color: #566879;
             }
         }
 
