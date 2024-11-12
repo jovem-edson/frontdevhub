@@ -28,7 +28,7 @@ export default function ExibirColecao() {
                         </div>
 
                         <div>
-                        <button className="botao-adicionar-video" onClick={() => navigate('/adicionar-video')}>
+                        <button className="botao-adicionar-video" onClick={() => navigate('/adicionar-material')}>
                             <FiPlus /> Adicionar Vídeo
                         </button>
                         </div>

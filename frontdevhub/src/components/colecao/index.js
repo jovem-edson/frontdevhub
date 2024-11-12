@@ -1,7 +1,7 @@
 import './index.scss'
 import MenuColecao from '../menuColecao';
 import { useNavigate } from 'react-router-dom';
-export default function Colecao() {
+export default function Colecao({idColecao, nome, descricao, dataCriacao, buscarColecoes, API_URL}) {
     const navigate = useNavigate();
 
     return (
@@ -15,22 +15,26 @@ export default function Colecao() {
                     <div className='colecao-cabecalho'>
                         <a onClick={() => navigate('/exibir-colecao')}>
                             <h1 className='colecao-titulo'>
-                                DEVHUB FOR DEVS
+                                {nome}
                             </h1>
                         </a>
 
                         <a>
-                            <MenuColecao/>
+                            <MenuColecao
+                             idColecao={idColecao}
+                             buscarColecoes={buscarColecoes}
+                             API_URL={API_URL}
+                             />
                         </a>
                     </div>
                     <p className='colecao-desc'>
-                        LUANGAMEPLAY
+                        {descricao}
                     </p>
                 </div>
 
                 <div>
                     <p className='colecao-data'>
-                        2022-10-09
+                        {dataCriacao}
                     </p>
 
 
