@@ -1,3 +1,4 @@
+import MenuVideos from '../menuVideos';
 import './index.scss';
 
 export default function CardVideo({ thumbnail, titulo, duracao }) {
@@ -5,7 +6,12 @@ export default function CardVideo({ thumbnail, titulo, duracao }) {
         <div className="card-video">
             <img src={thumbnail} alt={`Thumbnail de ${titulo}`} className="thumbnail-video" />
             <div className="informacoes-video">
-                <h3 className="titulo-video">{titulo}</h3>
+                <div className='cabecalho-video'>
+                    <h3 className="titulo-video">{titulo}</h3>
+                    <a>
+                        <MenuVideos />
+                    </a>
+                </div>
                 <span className="duracao-video">{duracao}</span>
             </div>
         </div>

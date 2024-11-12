@@ -1,5 +1,5 @@
 import './index.scss'
-import ColecaoOpcoes from '../menuColecao';
+import MenuColecao from '../menuColecao';
 import { useNavigate } from 'react-router-dom';
 export default function Colecao() {
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ export default function Colecao() {
                         </a>
 
                         <a>
-                            <ColecaoOpcoes/>
+                            <MenuColecao/>
                         </a>
                     </div>
                     <p className='colecao-desc'>

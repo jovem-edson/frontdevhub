@@ -1,0 +1,73 @@
+.pagina-adicionar-video {
+    max-width: 600px;
+    margin: auto;
+    padding: 16px;
+
+    .cabecalho-adicionar-video {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+
+        .botao-voltar {
+            background: none;
+            border: none;
+            color: #61809e;
+            font-size: 24px;
+            cursor: pointer;
+
+            &:hover {
+                color: #343A40;
+            }
+        }
+
+        h2 {
+            color: #61809e;
+            margin: 0;
+        }
+    }
+
+    .formulario-adicionar-video {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .campo-formulario {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-weight: bold;
+                color: #343A40;
+            }
+
+            input,
+            textarea {
+                padding: 8px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 80px;
+            }
+        }
+
+        .botao-salvar {
+            background-color: #343A40;
+            color: #61809e;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+
+            &:hover {
+                background-color: #61809e;
+                color: #343A40;
+            }
+        }
+    }
+}

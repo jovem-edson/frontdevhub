@@ -1,0 +1,50 @@
+.opcoes-video {
+    position: relative;
+    display: inline-block;
+
+    .icone-menu {
+        font-size: 20px;
+        cursor: pointer;
+        color: #61809e;
+        transition: 0.3s;
+
+        &:hover {
+            color: #343A40;
+
+        }
+    }
+
+    .menu-opcoes {
+        width: 100px;
+        right: 1px;
+        position: absolute;
+        top: -75px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+
+        button {
+            padding: 10px;
+            border: none;
+            background: none;
+            color: #343A40;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #61809e;
+                color: white;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+}

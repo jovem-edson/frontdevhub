@@ -18,6 +18,12 @@
     .informacoes-video {
         padding: 8px;
 
+        .cabecalho-video {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .titulo-video {
             font-size: 16px;
             font-weight: bold;
