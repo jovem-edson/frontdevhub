@@ -1,6 +1,9 @@
 import './index.scss'
 import ColecaoOpcoes from '../menuColecao';
+import { useNavigate } from 'react-router-dom';
 export default function Colecao() {
+    const navigate = useNavigate();
+
     return (
         <div className='colecao-container'>
             <div className='colecao-foto'>
@@ -10,7 +13,7 @@ export default function Colecao() {
             <div className='colecao-info'>
                 <div>
                     <div className='colecao-cabecalho'>
-                        <a>
+                        <a onClick={() => navigate('/exibir-colecao')}>
                             <h1 className='colecao-titulo'>
                                 DEVHUB FOR DEVS
                             </h1>

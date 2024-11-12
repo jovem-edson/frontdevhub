@@ -1,0 +1,71 @@
+.pagina-colecao {
+    max-width: 900px;
+    margin: auto;
+    padding: 16px;
+
+    .cabecalho-colecao {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+
+        .botao-voltar {
+            background: none;
+            border: none;
+            color: #61809e;
+            font-size: 24px;
+            cursor: pointer;
+
+            &:hover {
+                color: #343A40;
+            }
+        }
+
+        .informacoes-colecao {
+            display: flex;
+            flex-direction: column;
+            GAP: 15PX;
+
+            h2 {
+                color: #61809e;
+                margin: 0;
+            }
+
+            p {
+                color: #343A40;
+            }
+
+            .data-colecao {
+                display: block;
+                font-size: 14px;
+                color: #999;
+            }
+        }
+    }
+
+    .botao-adicionar-video {
+        background-color: #61809e;
+        color: #FFF;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #343A40;
+        }
+    }
+
+
+    .grade-videos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+    }
+}
