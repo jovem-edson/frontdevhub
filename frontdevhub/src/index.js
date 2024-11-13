@@ -4,12 +4,11 @@ import './index.scss';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Login from './pages/login';
+import Login from './pages/Logon';
 import Home from './pages/home';
 import AdicionarColecao from './pages/adicionarColecao';
 import ExibirColecao from './pages/exibirColecao';
 import AdicionarVideo from './pages/adicionarMaterial';
-import Login from './pages/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

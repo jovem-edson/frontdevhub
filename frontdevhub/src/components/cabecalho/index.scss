@@ -18,7 +18,7 @@
 
 .logoff-link {
     font-family: 'Inter', sans-serif;
-    color: #715C51;
+    color: #ffffff;
     font-weight: 500;
     margin-top: 5px;
 }
@@ -28,11 +28,12 @@
     text-decoration: none;
     cursor: pointer;
 }
+
 .cabecalho {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem; /* Optional padding for spacing */
+    justify-content: center;
+    padding: 1rem;
 }
 
 .cabecalho-logo {
@@ -52,7 +53,7 @@
     margin: 0;
     font-size: 1.5rem;
     color: #4b81e8;
-    padding-left: 0.25rem; /* Adds slight spacing between "DEV" and "HUB" */
+    padding-left: 0.25rem;
 }
 
 .cabecalho-botao {
@@ -69,4 +70,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.nav {
+    display: flex;
+    gap: 60px;
+    margin-right: 40px;
+
+    .link {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #fcfcfc;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #433D4A;
+        }
+    }
 }

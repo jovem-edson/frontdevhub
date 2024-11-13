@@ -12,6 +12,7 @@ export default function Home() {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const [showLogin, setShowLogin] = useState(false);
     const [listaColecoes, setListaColecoes] = useState([
         {
             "nome": "colecao 1",
@@ -48,6 +49,11 @@ export default function Home() {
         }
     }, [location.state]);
 
+    useEffect(() => {
+        if (location.state && location.state.showLogin) {
+            setShowLogin(true);
+        }
+    }, [location]);
 
     async function buscarColecoes() {
         let resp = await axios.get(`${API_URL}/colecao`, {
@@ -61,7 +67,8 @@ export default function Home() {
 
     return (
         <body className='pagina-home'>
-            <Cabecalho />
+            <Cabecalho showLogin={showLogin}
+                onLoginClick={() => setShowLogin(!showLogin)} />
 
             <main className='home-conteudo'>
                 <section className='conteudo-colecoes'>
