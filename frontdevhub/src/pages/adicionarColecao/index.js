@@ -41,10 +41,10 @@ export default function AdicionarColecao() {
     async function salvar(event) {
         event.preventDefault();
 
-        if (nome == "" || descricao == "") {
-            if (descricao == "") {
-                alert('o campo de descrição deve ser preenchido')
-            }
+        if (nome == "") {
+            // if (descricao == "") {
+            //     alert('o campo de descrição deve ser preenchido')
+            // }
 
             if (nome == "") {
                 alert('o campo de nome deve ser preenchido')
@@ -88,11 +88,16 @@ export default function AdicionarColecao() {
                     <button onClick={() => navigate('/home')} className="botao-voltar">
                         &#8592;
                     </button>
-                    Criar Nova Coleção
+                    
+                    {id == undefined ?
+                    'Criar Nova Coleção'
+                    :
+                    'Editar Coleção'    
+                }
                 </h2>
 
                 <form className='formulario-colecao' onSubmit={salvar}>
-                    <div className='formulario-campo'>
+                    {/* <div className='formulario-campo'>
                         <label for='capa'>Capa da Coleção</label>
                         <input
                             type='text'
@@ -100,10 +105,10 @@ export default function AdicionarColecao() {
                             name='capa'
                             placeholder='URL da imagem de capa'
                         />
-                    </div>
+                    </div> */}
 
                     <div className='formulario-campo'>
-                        <label for='nome'>Nome da Coleção</label>
+                        <label for='nome'>Nome da Coleção*</label>
                         <input
                             type='text'
                             id='nome'

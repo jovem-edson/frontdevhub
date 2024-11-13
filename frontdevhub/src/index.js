@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import AdicionarColecao from './pages/adicionarColecao';
 import ExibirColecao from './pages/exibirColecao';
-import AdicionarVideo from './pages/adicionarMaterial';
+import AdicionarMaterial from './pages/adicionarMaterial';
 import Login from './pages/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,9 +23,11 @@ root.render(
         <Route path='/adicionar-colecao' element={<AdicionarColecao/>}/>
         <Route path='/adicionar-colecao/:id' element={<AdicionarColecao/>}/>
 
-        <Route path='/exibir-colecao' element={<ExibirColecao/>}/>
-        <Route path='/adicionar-material' element={<AdicionarVideo/>}/>
-        <Route path='/adicionar-material:id' element={<AdicionarVideo/>}/>
+        <Route path='/exibir-colecao/:id' element={<ExibirColecao/>}/>
+        <Route path='/adicionar-material' element={<AdicionarMaterial/>}/>
+        <Route path='/adicionar-material/:id' element={<AdicionarMaterial/>}/>
+        <Route path='/adicionar-material/:id/:idmaterial' element={<AdicionarMaterial/>}/>
+
 
       </Routes>
     </BrowserRouter>

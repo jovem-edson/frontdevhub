@@ -4,6 +4,7 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
+    max-width: 200px;
 
     &:hover {
         transform: scale(1.05);

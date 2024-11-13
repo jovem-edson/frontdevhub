@@ -76,7 +76,7 @@ export default function Home() {
                                 idColecao={colecao.idColecao}
                                 nome={colecao.nome}
                                 descricao={colecao.descricao}
-                                dataCriacao={colecao.dataCriacao.substr(0, 10)}
+                                dataCriacao= {`Criada em ${new Date(colecao.dataCriacao).toLocaleDateString()}`}
                                 buscarColecoes={buscarColecoes}
                                 API_URL={API_URL}
                             />
