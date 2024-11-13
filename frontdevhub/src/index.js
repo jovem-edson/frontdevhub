@@ -22,7 +22,7 @@ root.render(
         <Route path='/adicionar-colecao' element={<AdicionarColecao/>}/>
         <Route path='/adicionar-colecao/:id' element={<AdicionarColecao/>}/>
 
-        <Route path='/exibir-colecao' element={<ExibirColecao/>}/>
+        <Route path='/exibir-colecao:/id' element={<ExibirColecao/>}/>
         <Route path='/adicionar-material' element={<AdicionarVideo/>}/>
         <Route path='/adicionar-material:id' element={<AdicionarVideo/>}/>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './index.scss';
 import { FiArrowLeft, FiPlus } from 'react-icons/fi';
 
@@ -9,6 +9,7 @@ import CardVideo from '../../components/cardVideo';
 
 export default function ExibirColecao() {
     const navigate = useNavigate();
+    const { id } = useParams();
 
     return (
         <body>
