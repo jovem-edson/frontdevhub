@@ -13,8 +13,8 @@ export default function Cabecalho({ onLoginClick, showLogin }) {
         <header className='cabecalho'>
             <div className='cabecalho-logo'>
                 {localStorage.getItem('TOKEN') ? (
-                    <div>
-                        <h1>DEV<p>HUB</p></h1>
+                    <div  >
+                        <h1 >DEV<p>HUB</p></h1>
                         <span className="logoff-link">
                             Retornar para &nbsp;
                             <a href="#" onClick={logOff} className="logoff-button">
