@@ -4,7 +4,7 @@ import './index.scss';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-
+import Login from './pages/login';
 import Home from './pages/home';
 import AdicionarColecao from './pages/adicionarColecao';
 import ExibirColecao from './pages/exibirColecao';
@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Login />} />
         <Route path='/home' element={<Home />} />
         <Route path='/criar-colecao' element={<AdicionarColecao/>}/>
         <Route path='/exibir-colecao' element={<ExibirColecao/>}/>

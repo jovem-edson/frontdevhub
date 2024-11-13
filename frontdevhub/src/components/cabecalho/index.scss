@@ -6,12 +6,67 @@
 
 .cabecalho-logo {
     h1 {
-    display: flex;
-    color: #61809e;
+        display: flex;
+        color: #61809e;
 
-    p {
-        background-color: #61809e;
-        color: #343A40;
+        p {
+            background-color: #61809e;
+            color: #343A40;
+        }
     }
 }
+
+.logoff-link {
+    font-family: 'Inter', sans-serif;
+    color: #715C51;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.logoff-button {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem; /* Optional padding for spacing */
+}
+
+.cabecalho-logo {
+    display: flex;
+    align-items: baseline;
+}
+
+.cabecalho-logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    color: black;
+}
+
+.cabecalho-logo p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #4b81e8;
+    padding-left: 0.25rem; /* Adds slight spacing between "DEV" and "HUB" */
+}
+
+.cabecalho-botao {
+    background-color: #61809e;
+    color: white;
+    padding: 5px 3px 5px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

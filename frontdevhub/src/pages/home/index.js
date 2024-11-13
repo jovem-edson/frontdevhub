@@ -9,7 +9,7 @@ export default function Home() {
     
     return (
         <body className='pagina-home'>
-            <Cabecalho/>
+            <Cabecalho showLogin={true}/>
 
             <main className='home-conteudo'>
                 <section className='conteudo-colecoes'>
