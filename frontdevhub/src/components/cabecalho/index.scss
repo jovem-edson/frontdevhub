@@ -2,16 +2,75 @@
     font-family: 'Montserrat', sans-serif;
     padding: 20px;
     background-color: #343A40;
-}
-
-.cabecalho-logo {
-    h1 {
     display: flex;
-    color: #61809e;
+    align-items: center;
+    justify-content: space-between; // Garante que os itens fiquem nos extremos da tela
 
-    p {
+    &-logo {
+        display: flex;
+        align-items: baseline;
+
+        h1 {
+            display: flex;
+            align-items: baseline;
+            font-size: 1.5rem;
+            color: #61809e;
+            margin: 0;
+
+            p {
+                margin: 0;
+                font-size: 1.5rem;
+                color: #343A40;
+                background-color: #61809e;
+                padding-left: 0.25rem;
+            }
+        }
+    }
+
+    &-botao {
         background-color: #61809e;
-        color: #343A40;
+        color: white;
+        padding: 5px 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100px;
+        height: 35px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
+
+.nav {
+    display: flex;
+    gap: 60px;
+    margin-right: 40px;
+
+    .link {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #fcfcfc;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #433D4A;
+        }
+    }
+}
+
+.logoff-link {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 5px;
+
+    .logoff-button {
+        color: blue;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }

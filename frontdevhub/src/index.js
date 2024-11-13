@@ -4,7 +4,7 @@ import './index.scss';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-
+import Login from './pages/Logon';
 import Home from './pages/home';
 import AdicionarColecao from './pages/adicionarColecao';
 import ExibirColecao from './pages/exibirColecao';

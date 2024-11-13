@@ -21,7 +21,7 @@ body {
     gap: 20px;
 
     h1 {
-        color:#343a40;
+        color: #343a40;
     }
 
     .colecoes {
@@ -36,14 +36,13 @@ body {
     justify-content: flex-end;
 
     h1 {
-        color:#61809e;
+        color: #61809e;
         font-size: 35px;
     }
 
     .criar-info {
         display: flex;
         flex-direction: column;
-        /* justify-content: flex-end; */
         align-items: end;
     }
 
@@ -56,6 +55,7 @@ body {
         display: flex;
         gap: 20px;
         margin-top: 15px;
+
         button {
             padding: 10px;
             border-radius: 10px;
@@ -66,7 +66,7 @@ body {
         .botao-primario {
             background-color: #343A40;
             border: none;
-            color:#61809e;
+            color: #61809e;
             transition: background-color 0.3s;
 
             &:hover {
@@ -75,7 +75,7 @@ body {
         }
 
         .botao-secundario {
-            background-color: #61809e; 
+            background-color: #61809e;
             border: none;
             color: #343A40;
             transition: background-color 0.3s;
