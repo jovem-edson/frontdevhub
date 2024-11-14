@@ -9,7 +9,6 @@ import Home from './pages/home';
 import AdicionarColecao from './pages/adicionarColecao';
 import ExibirColecao from './pages/exibirColecao';
 import AdicionarMaterial from './pages/adicionarMaterial';
-import Login from './pages/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

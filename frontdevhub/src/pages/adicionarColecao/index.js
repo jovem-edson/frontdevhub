@@ -5,6 +5,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../api/constantes';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function AdicionarColecao() {
     const navigate = useNavigate();
@@ -27,30 +29,44 @@ export default function AdicionarColecao() {
 
 
     async function buscarPorId() {
-        let token = localStorage.getItem('TOKEN');
-
-        let resp = await axios.get(`${API_URL}/colecao/${id}`, {
-            headers: { 'x-access-token': token }
-        });
-
-        setNome(resp.data.nome)
-        setDescricao(resp.data.descricao)
+        const token = localStorage.getItem('TOKEN');
+        try {
+            const resp = await axios.get(`${API_URL}/colecao/${id}`, {
+                headers: { 'x-access-token': token }
+            });
+            setNome(resp.data.nome);
+            setDescricao(resp.data.descricao);
+        } catch (error) {
+            console.error("Erro ao buscar coleção:", error);
+            toast.error("Erro ao carregar a coleção.");
+        }
     }
 
 
     async function salvar(event) {
         event.preventDefault();
 
-        if (nome == "") {
-            // if (descricao == "") {
-            //     alert('o campo de descrição deve ser preenchido')
-            // }
-
-            if (nome == "") {
-                alert('o campo de nome deve ser preenchido')
-            }
-
-            return
+        if (nome === "" || descricao === "") {
+            if (nome === "") {
+            toast.warn("O campo de nome deve ser preenchido", {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            }); } 
+            if (descricao === "") {
+                toast.warn("O campo de descrição deve ser preenchido", {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+            })
+        }
+            return;
         }
 
         let body = {
@@ -62,13 +78,26 @@ export default function AdicionarColecao() {
 
         if (id == undefined) {
             let resp = await axios.post(`${API_URL}/colecao`, body, { headers: { 'x-access-token': token } });
-            // alert(`Registro de ID ${resp.data.novoId} adicionado`);
+            toast.success(`Registro de ID ${resp.data.novoId} adicionado`, {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                });
 
         }
         else {
             let resp = await axios.put(`${API_URL}/colecao/` + id, body, { headers: { 'x-access-token': token } });
-            // alert(`Registro de ID ${id} alterado`);
-
+            toast.success(`Registro de ID ${id} alterado`, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
 
         }
 
@@ -83,6 +112,7 @@ export default function AdicionarColecao() {
     return (
         <div>
             <Cabecalho />
+            <ToastContainer />
             <div className='criar-colecao'>
                 <h2>
                     <button onClick={() => navigate('/home')} className="botao-voltar">

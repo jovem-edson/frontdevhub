@@ -8,6 +8,9 @@ import Cabecalho from '../../components/cabecalho';
 import axios from 'axios';
 import { API_URL } from '../../api/constantes';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function AdicionarMaterial() {
     const navigate = useNavigate();
 
@@ -44,17 +47,18 @@ export default function AdicionarMaterial() {
     async function salvar(event) {
         event.preventDefault();
 
-        if (nome == "" || url == "") {
-            // if (descricao == "") {
-            //     alert('o campo de descrição deve ser preenchido')
-            // }
-
+        if (nome == "" || url == "" || descricao == "") {
+     
             if (nome == "") {
-                alert('o campo de nome deve ser preenchido')
+                toast.warn('o campo de título deve ser preenchido')
+            }
+
+            if (descricao == "") {
+                toast.warn('o campo de descrição deve ser preenchido')
             }
 
             if (url == "") {
-                alert('o campo de URL deve ser preenchido')
+                toast.warn('o campo de URL deve ser preenchido')
             }
 
          
@@ -97,6 +101,7 @@ export default function AdicionarMaterial() {
     return (
         <body>
             <Cabecalho />
+            <ToastContainer />
             <div className="pagina-adicionar-video">
                 <header className="cabecalho-adicionar-video">
                     <button className="botao-voltar" onClick={voltarParaColecao}>

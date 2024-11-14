@@ -5,6 +5,8 @@ import Cabecalho from '../../components/cabecalho';
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
     const [email, setEmail] = useState('')
@@ -27,7 +29,15 @@ export default function Login() {
             navigate('/home', { state: { showLogin: true } });
         }
         catch (err) {
-            alert(err.response.data.erro)
+            toast.error(err.response.data.erro || "Ocorreu um erro ao tentar fazer login.", {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
     }
 
@@ -39,7 +49,7 @@ export default function Login() {
         <body className='pagina-login'>
             <Cabecalho onLoginClick={toggleLogin} showLogin={showLogin} />
             <main className='pagina-ln-login'>
-
+                <ToastContainer />
 
 
                 <div className='background-image'>
