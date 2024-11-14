@@ -4,73 +4,77 @@
     background-color: #343A40;
     display: flex;
     align-items: center;
-    justify-content: space-between; // Garante que os itens fiquem nos extremos da tela
+    justify-content: space-between; /* Garante que os itens fiquem nos extremos da tela */
+    height: 80px; /* Garantir uma altura fixa para o cabeçalho */
+    position: relative; /* Para garantir que o logoff-link seja posicionado de forma relativa ao cabeçalho */
+}
 
-    &-logo {
+.cabecalho-logo {
+    display: flex;
+    align-items: baseline;
+
+    h1 {
         display: flex;
         align-items: baseline;
+        font-size: 1.5rem;
+        color: #61809e;
+        margin: 0;
 
-        h1 {
-            display: flex;
-            align-items: baseline;
-            font-size: 1.5rem;
-            color: #61809e;
+        p {
             margin: 0;
-
-            p {
-                margin: 0;
-                font-size: 1.5rem;
-                color: #343A40;
-                background-color: #61809e;
-                padding-left: 0.25rem;
-            }
+            font-size: 1.5rem;
+            color: #343A40;
+            background-color: #61809e;
+            padding-left: 0.25rem;
         }
     }
+}
 
-    &-botao {
-        background-color: #61809e;
-        color: white;
-        padding: 5px 12px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        width: 100px;
-        height: 35px;
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.cabecalho-botao {
+    background-color: #61809e;
+    color: white;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
 .nav {
     display: flex;
-    gap: 60px;
-    margin-right: 40px;
+    gap: 90px;
+    margin-right: 90px;
+    margin: 240px;
+}
 
-    .link {
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        color: #fcfcfc;
-        text-decoration: none;
-        transition: color 0.3s;
+.link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #fcfcfc;
+    text-decoration: none;
+    transition: color 0.3s;
 
-        &:hover {
-            color: #433D4A;
-        }
+    &:hover {
+        color: #433D4A;
     }
 }
 
 .logoff-link {
+    display: flex;
     font-family: 'Inter', sans-serif;
     color: #ffffff;
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: 20px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
 
-    .logoff-button {
-        color: blue;
-        text-decoration: none;
-        cursor: pointer;
-    }
+.logoff-button {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
 }
