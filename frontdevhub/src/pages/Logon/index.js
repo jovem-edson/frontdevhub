@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { API_URL } from '../../api/constantes';
 
 export default function Login() {
     const [email, setEmail] = useState('')
@@ -22,7 +23,7 @@ export default function Login() {
                 "senha": senha
             }
 
-            let resp = await axios.post('http://localhost:3010/login', body);
+            let resp = await axios.post(`http://${API_URL}/login`, body);
 
             localStorage.setItem('TOKEN', resp.data.token);
 
