@@ -23,7 +23,7 @@ export default function Login() {
                 "senha": senha
             }
 
-            let resp = await axios.post(`http://${API_URL}/login`, body);
+            let resp = await axios.post(`${API_URL}/login`, body);
 
             localStorage.setItem('TOKEN', resp.data.token);
 
